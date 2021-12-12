@@ -3,7 +3,6 @@ module.exports = {
     once: true,
     execute(client) {
 console.log('Connected to index.js')
-require('../connectToMongo.js')
      const activities = [
     `Vultra`,
     `WE ARE BACK`,
