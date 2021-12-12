@@ -4,7 +4,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('angry')
-		.setDescription('Why u angry?')
+		.setDescription('Why u angry?'),
 cooldowns : new Set(),
 	    cooldown : 3,
 	async execute(interaction) {
