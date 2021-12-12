@@ -12,7 +12,6 @@ module.exports = {
  .addChoice('Moderation', 'moderation')
         .addChoice('Misc', 'misc')
         .addChoice('Fun', 'fun')
-        .addChoice('Other', 'other')
     ),
 cooldowns : new Set(),
 	    cooldown : 8,
@@ -21,8 +20,8 @@ const choice = interaction.options.getString('category');
 if (choice === "fun") {
 msg='Help menu for Economy'
 const economyEmbed = new MessageEmbed()
-.setTitle('Economy Commands')
-.setDescription(`:coin: **FUn commands:**
+.setTitle('Fun Commands')
+.setDescription(`:coin: **Fun commands:**
  
 **/8ball** - Ask the 8ball any question you want!
 
@@ -71,7 +70,29 @@ const miscEmbed = new MessageEmbed()
 `)
 .setColor('RANDOM')
 return await interaction.reply({embeds: [miscEmbed]})
-} 
+} else if(choice === "moderation") {
+const moderationEmbed = new MessageEmbed()
+.setTitle('Moderation Commands')
+.setDescription(`
+:wrench: **Moderation commands:** 
+
+**/kick** - Kick people who are breaking rules
+
+**/ban** - Ban members that are breaking rules
+
+**/mute** - **Coming soon** :tm:
+
+**/unmute** - **Coming soon** :tm:
+
+**/warn** - **Coming soon** :tm:
+
+**/removewarn** - **Coming soon** :tm:
+
+
+`)
+.setColor('RANDOM')
+return await interaction.reply({embeds: [modaerationEmbed]})
+}
 
 	},
 };
