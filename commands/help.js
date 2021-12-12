@@ -91,7 +91,7 @@ const moderationEmbed = new MessageEmbed()
 
 `)
 .setColor('RANDOM')
-return await interaction.reply({embeds: [modaerationEmbed]})
+return await interaction.reply({embeds: [moderationEmbed]})
 }
 
 	},
