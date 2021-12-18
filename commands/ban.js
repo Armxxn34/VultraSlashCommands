@@ -38,7 +38,7 @@ return await interaction.reply({embeds: [userError]})
 if(interaction.guild.ownerId === user.id) {
 const GuildError = new MessageEmbed()
 .setTitle('Unable to ban')
-.setDescription('Don`t try ban Armxxn34...')
+.setDescription('You cant ban the guild owner :joy:')
 .setColor('RANDOM')
             return await interaction.reply({embeds: [GuildError]})
 }
@@ -46,7 +46,7 @@ const GuildError = new MessageEmbed()
 
 const dmEmbed = new MessageEmbed()
 .setTitle('You were banned')
-.setDescription(`You were banned from MrMoney support:
+.setDescription(`You were banned from ${interaction.guild.name}:
 
 Responsible Moderator: ${interaction.user.username}
 
@@ -71,9 +71,6 @@ Reason: ${reason}
 Responsible Moderator: ${interaction.user.username} `)
 .setColor('RANDOM')
         await interaction.reply({embeds: [mutedEmbed]})
-interaction.client.channels.fetch("912058082270535761").then(channel  => 
-            channel.send({embeds: [mutedEmbed]})
-)
         } 
     }
 }
