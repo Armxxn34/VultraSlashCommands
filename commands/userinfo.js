@@ -17,7 +17,7 @@ cooldowns : new Set(),
     async execute(interaction) {
         const user = interaction.options.getMember("user") || interaction.user
 
- 
+const roles =  member.roles.cache.forEach(role => roles += `${role.name}\n`)
 
         const embed = new MessageEmbed()
         .setTitle(`UserInfo`)
@@ -27,10 +27,11 @@ cooldowns : new Set(),
 Nickname: ${user.username}
 
 ID: ${user.id.toString()}
-
-Joined At: ${time(Math.floor(user.joinedTimestamp / 1000),"F").toString()}
+ 
 
 Created at: ${time(Math.floor(user.createdTimestamp / 1000),"F").toString()}
+
+Roles: ${roles}
 `)
     await interaction.reply({embeds: [embed]})
     }
