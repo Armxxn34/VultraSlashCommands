@@ -14,7 +14,7 @@ module.exports = {
     cooldown: 5,
     
     async execute(interaction) {
-        const user = interaction.options.getMember("user") || interaction.member
+        const user = interaction.options.getMember("user") || interaction.user
 
  
 
