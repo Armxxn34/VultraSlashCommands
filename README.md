@@ -1,6 +1,6 @@
 ![](https://custom-icon-badges.herokuapp.com/github/stars/Armxxn34/VultraSlashCommands?logo=star)
 [![](https://custom-icon-badges.herokuapp.com/github/commit-activity/w/Armxxn34/VultraSlashCommands?style=plastic&logo=github)](https://github.com/Armxxn34/VultraSlashCommands)
-[![](https://custom-icon-badges.herokuapp.com/github/last-commit/Armxxn34/VultraVultraSlashCommands?style=plastic&logo=github)](https://github.com/Armxxn34/VultraSlashCommands)
+[![](https://custom-icon-badges.herokuapp.com/github/last-commit/Armxxn34/VultraSlashCommands?style=plastic&logo=github)](https://github.com/Armxxn34/VultraSlashCommands)
 
 **Vultra Slash Commands**
 
