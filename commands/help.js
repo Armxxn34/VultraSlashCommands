@@ -21,7 +21,7 @@ if (choice === "fun") {
 msg='Help menu for Economy'
 const economyEmbed = new MessageEmbed()
 .setTitle('Fun Commands')
-.setDescription(`:coin: **Fun commands:**
+.setDescription(`:joy: **Fun commands:**
  
 **/8ball** - Ask the 8ball any question you want!
 
@@ -74,7 +74,7 @@ return await interaction.reply({embeds: [miscEmbed]})
 const moderationEmbed = new MessageEmbed()
 .setTitle('Moderation Commands')
 .setDescription(`
-:wrench: **Moderation commands:** 
+:exclamation: **Moderation commands:** 
 
 **/kick** - Kick people who are breaking rules
 
