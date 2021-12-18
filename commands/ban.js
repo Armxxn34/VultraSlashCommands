@@ -27,6 +27,22 @@ cooldown: 5,
         const reason = interaction.options.getString("reason") || "No reason provided."
         const user = interaction.options.getMember("member")
 
+if(!interaction.guild.me.permissions.has("BAN_MEMBERS")) {
+const embedError = new MessageEmbed()
+.setTitle('Unable to ban')
+.setDescription(`I am missing the **Ban members** permission`)
+.setColor("RED")
+return interaction.reply({embeds: [embedError]})
+}
+if(user.roles.highest >= interaction.member.roles.highest && !interaction.guild.ownerId == interaction.member.id) {
+const embed = new MessageEmbed()
+.setTitle("You cannot ban this user...")
+.setDescription("They have a role higher then your role.")
+.setColor("RED")
+            return await interaction.reply({embeds: [embed]})
+
+}
+
 if(user === interaction.guild.me){
 const userError2 = new MessageEmbed()
 .setTitle('Unable To Ban')
