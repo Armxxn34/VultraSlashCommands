@@ -26,7 +26,7 @@ cooldown: 5,
 
         const reason = interaction.options.getString("reason") || "No reason provided."
         const user = interaction.options.getMember("member")
-if(user === client.id){
+if(user === interaction.client.id){
 const userError2 = new MessageEmbed()
 .setTitle('Unable to kick')
 .setDescription('I cannot kick myself')
