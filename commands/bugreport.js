@@ -31,7 +31,7 @@ cooldowns: new Set(),
 const choice = interaction.options.getString('category');
         const member = interaction.options.getUser("user")
         const reason = interaction.options.getString("reason")
-        if(choice === "vultra"){
+        if(choice === "Vultra"){
 const embed = new MessageEmbed()
 .setTitle('New Report')
 .setDescription(`
