@@ -31,7 +31,7 @@ ID: ${user.id.toString()}
 
 Created at: ${time(Math.floor(user.createdTimestamp / 1000),"F").toString()}
 
-Roles: ${roles}
+Roles: Coming soon:tm:
 `)
     await interaction.reply({embeds: [embed]})
     }
