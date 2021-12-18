@@ -18,7 +18,7 @@ module.exports = {
         ),
 cooldowns: new Set(),
 cooldown: 5,
-    async execute(interaction) {
+    async execute(interaction, client) {
 
         if(!interaction.member.permissions.has("BAN_MEMBERS")) {
             return await interaction.reply("You are missing the `BAN_MEMBERS` permission.")
@@ -26,6 +26,14 @@ cooldown: 5,
 
         const reason = interaction.options.getString("reason") || "No reason provided."
         const user = interaction.options.getMember("member")
+
+if(user === client.id){
+const userError2 = new MessageEmbed()
+.setTitle('Unable To Ban')
+.setDescription('I cannot ban myself lmao')
+.setColor('RANDOM')
+return await interaction.reply({embeds: [userError]})
+}
 
 if(!user){
 const userError = new MessageEmbed()
