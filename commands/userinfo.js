@@ -11,7 +11,7 @@ module.exports = {
         .setDescription("The user you wanna check out")
         .setRequired(false)
         ),
-cooldowns : new Set()
+cooldowns : new Set(),
     cooldown: 5,
     
     async execute(interaction) {
