@@ -10,11 +10,11 @@ module.exports = {
 	async execute(interaction) {
  const botAdd = `[Join our support server!](https://discord.gg/Mq3bSHMDpp
 )`
-        const pingy = new MessageEmbed()
+        const supportEmbed = new MessageEmbed()
 	.setColor('RANDOM')
 	.setTitle("Official Support!")
 	.setDescription(botAdd)
 	.setTimestamp()
-		return interaction.reply({ embeds: [pingy] });
+		return interaction.reply({ embeds: [supportEmbed] });
 	},
 };
