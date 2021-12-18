@@ -15,7 +15,7 @@ cooldowns : new Set(),
     cooldown: 5,
     
     async execute(interaction) {
-        const user = interaction.options.getMember("user") || interaction.user
+        const user = interaction.options.getUser("user") || interaction.user
 
 
         const embed = new MessageEmbed()
