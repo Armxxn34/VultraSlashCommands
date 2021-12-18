@@ -28,10 +28,10 @@ cooldowns: new Set(),
     cooldown: 15,
     async execute(interaction) {
 
-const choice = interaction.options.getString('category');
+const choice = interaction.options.getString('bot');
         const member = interaction.options.getUser("user")
         const reason = interaction.options.getString("reason")
-        if(choice === "Vultra"){
+        if(choice === "vultra"){
 const embed = new MessageEmbed()
 .setTitle('New Report')
 .setDescription(`
