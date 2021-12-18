@@ -17,7 +17,6 @@ cooldowns : new Set(),
     async execute(interaction) {
         const user = interaction.options.getMember("user") || interaction.user
 
-const roles =  user.roles.cache.forEach(role => roles += `${role.name}\n`)
 
         const embed = new MessageEmbed()
         .setTitle(`UserInfo`)
