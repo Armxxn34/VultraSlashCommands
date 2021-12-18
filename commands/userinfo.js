@@ -23,14 +23,14 @@ cooldowns : new Set(),
         .setThumbnail(user.displayAvatarURL())
         .setColor("GREEN")
         .setDescription(`User:
-Nickname: ${user.username}
 
-ID: ${user.id.toString()}
- 
+**Nickname**: ${user.username}
 
-Created at: ${time(Math.floor(user.createdTimestamp / 1000),"F").toString()}
+**ID**: ${user.id.toString()}
 
-Roles: Coming soon:tm:
+**Created at**: ${time(Math.floor(user.createdTimestamp / 1000),"F").toString()}
+
+**Roles**: Coming soon:tm:
 `)
     await interaction.reply({embeds: [embed]})
     }
