@@ -27,7 +27,7 @@ cooldown: 5,
         const reason = interaction.options.getString("reason") || "No reason provided."
         const user = interaction.options.getMember("member")
 
-if(user === client.id){
+if(user === interaction.guild.me){
 const userError2 = new MessageEmbed()
 .setTitle('Unable To Ban')
 .setDescription('I cannot ban myself lmao')
