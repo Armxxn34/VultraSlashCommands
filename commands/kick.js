@@ -18,7 +18,7 @@ module.exports = {
         ),
 cooldowns: new Set(),
 cooldown: 5,
-    async execute(interaction) {
+    async execute(interaction, client) {
 
         if(!interaction.member.permissions.has("KICK_MEMBERS")) {
             return await interaction.reply("You are missing the `KICK_MEMBERS` permission.")
@@ -26,6 +26,13 @@ cooldown: 5,
 
         const reason = interaction.options.getString("reason") || "No reason provided."
         const user = interaction.options.getMember("member")
+if(user === client.id){
+const userError2 = new MessageEmbed()
+.setTitle('Unable to kick')
+.setDescription('I cannot kick myself')
+.setColor('RANDOM')
+return await interaction.reply({embeds: [userError2]})
+}
 
 if(!user){
 const userError = new MessageEmbed()
@@ -38,7 +45,7 @@ return await interaction.reply({embeds: [userError]})
 if(interaction.guild.ownerId === user.id) {
 const GuildError = new MessageEmbed()
 .setTitle('Unable to ban')
-.setDescription('Don`t try kick Armxxn34...')
+.setDescription('Don`t try kick the server owner!')
 .setColor('RANDOM')
             return await interaction.reply({embeds: [GuildError]})
 }
@@ -70,8 +77,6 @@ Reason: ${reason}
 Responsible Moderator: ${interaction.user.username} `)
 .setColor('RANDOM')
         await  interaction.reply({embeds: [mutedEmbed]})
-interaction.client.channels.fetch("912058082270535761").then(channel  => 
-            channel.send({embeds: [mutedEmbed]}))
         
         } 
     }
