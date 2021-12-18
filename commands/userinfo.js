@@ -11,6 +11,7 @@ module.exports = {
         .setDescription("The user you wanna check out")
         .setRequired(false)
         ),
+cooldowns : new Set()
     cooldown: 5,
     
     async execute(interaction) {
@@ -27,9 +28,9 @@ Nickname: ${user.username}
 
 ID: ${user.id.toString()}
 
-Joined At: ${time(Math.floor(member.joinedTimestamp / 1000),"F").toString()}
+Joined At: ${time(Math.floor(user.joinedTimestamp / 1000),"F").toString()}
 
-Created at: ${time(Math.floor(member.user.createdTimestamp / 1000),"F").toString()}
+Created at: ${time(Math.floor(user.createdTimestamp / 1000),"F").toString()}
 `)
     await interaction.reply({embeds: [embed]})
     }
