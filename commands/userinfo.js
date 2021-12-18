@@ -21,7 +21,6 @@ module.exports = {
         const embed = new MessageEmbed()
         .setTitle(`UserInfo`)
         .setThumbnail(user.displayAvatarURL())
-        .setAuthor(user.tag, user.displayAvatarURL())
         .setColor("GREEN")
         .setDescription(`User:
 Nickname: ${user.username}
